@@ -8,6 +8,7 @@ const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
+
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
@@ -44,7 +45,7 @@ function mostraResultado() {
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
-    botaoJogarNovamente.addEventListener("click", jogaNovamente());
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
 function jogaNovamente(){
@@ -53,11 +54,4 @@ function jogaNovamente(){
     caixaResultado.classList.remove("mostrar");
     mostraPergunta();
 }
-
-function substituiNome() {
-    for (const pergunta of perguntas) {
-        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
-    }
-}
-
 mostraPergunta();
