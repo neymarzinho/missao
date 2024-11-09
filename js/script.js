@@ -72,4 +72,4 @@ function substituiNome(){
     }
 }
 substituiNome();
-mostraPergunta();
+substituiNome();
