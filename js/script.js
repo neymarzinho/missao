@@ -13,6 +13,7 @@ const telaInicial = document.querySelector(".tela-inicial");
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
+botaoIniciar.addEventListener('click', iniciaJogo);
 
 function mostraPergunta() {
     if (atual >= perguntas.length) {
